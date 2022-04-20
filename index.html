@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>HospoHound | Serving up digital storms...</title>
+  </head>
+  <body class="home"> 
+    <!-- Contact Form Modal -->
+    <div class="contact-form-modal">
+      <i class="fa-solid fa-xmark fa-2xl modal-exit"></i>
+      <div id="contact-form" class="contact-form">
+        <h2>Let's work together!</span></h2>
+        <p>If you're interested in creating an online experience that you can be proud of, please get in touch with us below:</p>
+            <form id="form" action="" method="POST">
+              <div class="form-control">
+                <input type="hidden" name="_captcha" value="false">
+  
+  
+                <input 
+                type="text" 
+                id="name name-input" 
+                name="name"
+                placeholder="name"
+                tabindex="1"
+                minlength="2" maxlength="20"
+                required />
+              </div>
+              <input type="hidden" name="_subject" value="">
+              <input type="hidden" name="_template" value="box">
+  
+              <div class="form-control">
+                <input 
+                type="text" 
+                id="number phone-input" 
+                name="number"
+                placeholder="contact number"
+                tabindex="2"
+                
+                required />
+              </div>
+              
+              <div class="form-control">
+                <input 
+                type="email" 
+                id="email email-input" 
+                name="email"
+                placeholder="email"
+                tabindex="3"
+                required />
+              </div>
+              <!-- CHECKBOX -->
+              <div class="checkbox-container-container">
+                <h4 class="form-text">How would you like to be contacted?</h4>
+                <label class="checbox-container">Phone
+                  <input  class="checkbox" type="checkbox" checked="checked">
+                  <!-- <span class="checkmark"></span> -->
+                </label>
+                
+                <label class="checkbox-container">email
+                  <input class="checkbox" type="checkbox">
+                  <!-- <span class="checkmark"></span> -->
+                </label>
+              </div>
+              <div class="form-control">
+                <input
+                  type="text"
+                  id="business-name"
+                  name="name"
+                  placeholder="business name"
+                  tabindex="4"
+                />
+              </div>
+              <div class="form-control full-width">
+                <textarea 
+                rows="5" 
+                type="text" 
+                name="content"
+                tabindex="5"
+                id="help message-input" 
+                maxlength="250"
+                placeholder="please give us a taste of what you're after?"></textarea>
+          
+              </div>
+              <button id="submit" type="submit" class="send-message">send message</button>
+              <!-- <div class="checkbox-container-container">
+                <h4 class="form-text">Not sure what you're after? Would you like a free website review?</h4>
+                <label class="checbox-container">Yes please!
+                  <input  class="checkbox" type="checkbox" checked="checked">
+                  <!-- <span class="checkmark"></span> -->
+                </label>
+            </form>
+            <p id="toast" type="hidden" class="success-message"style="color:red">Cool beans! We've received your message and we'll be in touch shortly.</p>
+      </div>
+
+      
+
+
+      </div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <header class="primary-header flex">
+        <div>
+          <img src="assets/logos/PNG Files/HospoHound_LandscapeLogo_Solid.png" alt="logo" class="logo">
+          
+        </div>
+        
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+            <span class="sr-only" aria-expanded="false"></span>
+          </button>
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation underline-indicators flex"
+          >
+            <li class="active">
+              <a
+                class="uppercase nav-item"
+                href="index.html"
+                >services</a
+              >
+            </li>
+            <li>
+              <a
+                class="uppercase nav-item"
+                href="#"
+                id="about-us-section"
+                >about</a
+              >
+            </li>
+            <li>
+              <a
+                class="uppercase nav-item"
+                href="#"
+                >portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                class="uppercase nav-item"
+                href="#"
+                >blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="uppercase contact-btn nav-item"
+                href="#"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      
+        
+      </nav>
+      <div class="hero-content grid">
+        <div class="hero-text flex letter-spacing-3">
+          <h1>We create 5-star websites for your hospitality business.</h1>
+          <p>Helping you fill more seats & sell more drinks!</p>
+          <button class="btn cta-btn uppercase">work together?</button>
+        </div>
+        <img
+          src="assets/logos/PNG Files/HospoHound_RoundLogo_Solid.png"
+          alt="hero logo"
+        />
+      </div>
+    </section>
+    <!-- STORY BRAND SECTION -->
+    <section class="story-brand flex flow">
+      <form id="contactForm">
+        <label>Name</label>
+        <input type="text" placeholder="Name" name="name" required>
+        <label>Email Address</label>
+        <input type="email" placeholder="Email Address" name="email" required>
+        <label>Message</label>
+        <textarea rows="5" placeholder="Message" name="content" required></textarea>
+        <div id="toast"></div>
+        <button type="submit" id="submit">Send</button>
+      </form>
+      <div class="story-1 flex">
+        
+          <img class="story-image" src="assets/images/HospoHound_Icon1.png" alt="" />
+          <img src="./pattern-curve-top-right.svg" alt="" />
+          <article>
+
+            <h1 class="fs-500 flex flow">Clean, modern & elegant websites</h1>
+            <p class="fs-200">
+              Grab attention, shine a light on what makes your business unique & inspire all users to click "book now" & become your customers. 
+            </p>
+          </article>
+
+        
+      </div>
+      <div class="story-2 flex flow">
+        <article>
+          <h1 class="fs-500 flow">Wake up and smell YOUR coffee!</h1>
+          <p class="fs-200">
+            We'll look after everything on the digital side of things. Leaving you with less headaches & more time to focus on what you do best. 
+          </p>
+
+        </article>
+        <img src="assets/images/HospoHound_Icon2.png" alt="" />
+        <!-- <img src="./pattern-curve-top-right.svg" alt="" /> -->
+      </div>
+      <div class="story-3 flex">
+        <img src="assets/images/HospoHound_Icon3.png" alt="" />
+        <!-- <img src="./pattern-curve-top-right.svg" alt="" /> -->
+        <article>
+          <h1 class="fs-500 flow">Putting your business on the map</h1>
+          <p class="200">
+            We use a collection of technologies to help put your business at the forefront of your locality. Become a local hero.
+          </p>
+
+        </article>
+      </div>
+    </section>
+    <!-- MODERN TOOLS SECTION -->
+    <section class="modern-tools flex flow">
+      <article class="text flex">
+        <h1 class="fs-700">Modern tools for the modern world</h1>
+        <p class="fs-400">
+          We cater for all technological requirements! It's hard to keep up with
+          technology these days. Let us take control of the nitty, gritty tech
+          whilst you can focus on wha really matters - your customers!
+        </p>
+      </article>
+      
+      <img src="./assets/images/HospoHound_ModernWorldImage.jpg" alt="">
+    </section>
+    <!-- PORTFOLIO SECTION -->
+    
+    <!-- Mobile Portfolio Section -->
+    <section class="mobile-portfolio">
+      <h2>A taste from our portfolio...</h2>
+      <div class="project flex">
+        <!-- <i class="fa-solid fa-3x fa-angle-left btn--left previous"></i> -->
+        <div class="slider">
+          <img class="item" src="./assets/images/Project 1.jpg" alt="">
+          <img class="item" src="./assets/images/Project 2.png" alt="">
+          <img class="item" src="./assets/images/Project 3.jpg" alt="">
+          <img class="item" src="./assets/images/Project 4.png" alt="">
+        </div>
+        <!-- <i class="fa-solid fa-3x fa-angle-right btn--right next"></i> -->
+      </div>
+      <div class="description-container flex">
+        <div class="selection-lines">
+          <span class="selection-line selection-line1 active-line"></span>
+          <span class="selection-line selection-line2 "></span>
+          <span class="selection-line selection-line3"></span>
+          <span class="selection-line selection-line4"></span>
+        </div>
+      
+        <div class="infoList">
+          <div class="info__wrapper">
+            <div class="info current--info">
+              <h1 class="text name" id="portfolio-title">dine restaurant</h1>
+              <p class="text description" id="rest-description">just a little bit of info about this project, this focused on a clear mission, elegant menu and an integrating booking system.</p>
+            </div>
+      
+            <!-- <div class="info next--info">
+              <h1 class="text name">lime cordial cafe</h1>
+              <p class="text description">Adventure is never far away</p>
+            </div>
+      
+            <div class="info previous--info">
+              <h1 class="text name"></h1>
+              <p class="text description">Let your dreams come true</p>
+            </div>
+
+            <div class="info previous--info">
+              <h1 class="text name">Chamonix</h1>
+              <p class="text description">Let your dreams come true</p>
+            </div> -->
+          </div>
+        </div>
+       
+      </div>
+    </section>
+
+    <section class="portfolio-copy">
+      
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section class="about-us flex" id="about-us-section">
+      <!-- <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+        <source src="./assets/videos/stock-video.mp4" type="video/mp4">
+      </video> -->
+        <img
+          src="assets/logos/PNG Files/HospoHound_RoundLogo_Textured.png"
+          alt="logo"
+        />
+        <article>
+          <h2>Ex-hospo professionals turned web & graphic design guru's!</h2>
+          <p>
+            We are a small, passionate team of ex-hospitality workers-turned web &
+            graphic design guru’s - based in Melbourne, Australia. Whether you’re a
+            small, boutique cafe looking for an elegant landing page or a
+            large-scale restaurant needing an advanced booking system - we cater for
+            all hospo businesses! 
+          </p>
+  
+        </article>
+
+      
+    </section>
+    <!-- testimonial section -->
+    <!-- <section class="testimonials">
+
+    </section> -->
+    <!-- FINAL CTA SECTION -->
+    <section class="final-cta">
+      <div class="text-container flex">
+        <h1 class="letter-spacing-2 fs-400">Ready to serve up a storm?</h1>
+        <button class="btn letter-spacing-3 uppercase final-cta-btn">Let's work together?</button>
+
+      </div>
+    </section> 
+    <!-- Footer -->
+    <footer class="footer flex">
+      <div class="footer-logo flex">
+
+        <img
+          src="assets/logos/PNG Files/HospoHound_LandscapeLogo_Solid.png"
+          alt=""
+        />
+        <p class="footer-text">
+          HospoHound is a small team of ex-hospitality-professionals-turned web
+          and graphic designers. Our goal is to create simple, yet elegant online
+          experiences for those who are serious about their hospitality business.
+        </p>
+        <p>Copyright 2022. All Rights Reserved</p>
+      </div>
+
+      <div>
+        <div class="footer-nav flex">
+          <ul class="footer-nav-item flex uppercase">
+            services
+          </ul>
+          <ul class="footer-nav-item uppercase">
+            about
+          </ul>
+          <ul class="footer-nav-item uppercase">
+            our work
+          </ul>
+          <ul class="footer-nav-item uppercase">
+            blog
+          </ul>
+          <ul class="footer-nav-item uppercase">
+            contact
+          </ul>
+        </div>
+        <div class="social-icons flex">
+          <i class="social-icon"
+            ><img src="assets/images/socialIcons/twitter.svg" alt="twitter"
+          /></i>
+          <i class="social-icon"
+            ><img src="assets/images/socialIcons/facebook.svg" alt="facebook"
+          /></i>
+          <i class="social-icon"
+            ><img src="assets/images/socialIcons/instagram.svg" alt="instagram"
+          /></i>
+        </div>
+
+      </div>
+
+      
+
+    </footer>
+  </body>
+  <script src="./index.js"></script>
+  <script src="./handler.js"></script>
+  <script src="./form.js"></script>
+</html>
