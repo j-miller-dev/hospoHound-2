@@ -47,7 +47,7 @@ ctaBtn.addEventListener("click", openModal);
 modalExit.addEventListener("click", closeModal);
 
 function openModal() {
-  modal.style.display = "block";
+  modal.style.display = "flex";
 }
 
 function closeModal() {
