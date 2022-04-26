@@ -1827,9 +1827,8 @@ a {
   } */
 
   .about-us > img {
-    padding: 6rem;
-    max-width: 50%;
-    min-width: 40%;
+    padding: 6rem 6rem 0rem 6rem;
+    width: clamp(50%, 30rem, 50vw);
   }
 
   .about-us > article {
