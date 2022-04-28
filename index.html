@@ -30,7 +30,7 @@
       <div id="contact-form" class="contact-form">
         <h2>Let's work together!</span></h2>
         <p>If you're interested in creating an online experience that you can be proud of, please get in touch with us below:</p>
-            <form id="form" action="https://formspree.io/f/xgedpakv" method="POST">
+            <form id="ajaxForm" action="https://getform.io/f/653db60a-ed7c-40b1-9335-1dc3871bfe4f" method="POST">
               <div class="form-control">
                 <input type="hidden" name="_captcha" value="false">
   
@@ -418,6 +418,28 @@
 
     </footer>
   </body>
+  <script>
+    $("#ajaxForm").submit(function(e){
+  e.preventDefault();
+  var action = $(this).attr("action");
+  $.ajax({
+    type: "POST",
+    url: action,
+    crossDomain: true,
+    data: new FormData(this),
+    dataType: "json",
+    processData: false,
+    contentType: false,
+    headers: {
+      "Accept": "application/json"
+    }
+  }).done(function() {
+     $('.success').addClass('is-active');
+  }).fail(function() {
+     alert('An error occurred! Please try again later.')
+  });
+});
+  </script>
   <script src="./index.js"></script>
   <script src="./handler.js"></script>
   <script src="./form.js"></script>
