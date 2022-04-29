@@ -300,21 +300,11 @@ select {
   margin: auto 0;
   height: 500px;
   width: 500px;
-  /* top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; */
+
   z-index: 5000;
 }
 /* Modal */
-/* .contact-form {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  position: absolute;
 
-  transform: translateY(-50%);
-} */
 #contact-form {
   overflow: hidden;
   height: 80vh;
@@ -364,6 +354,7 @@ select {
   z-index: 5000;
   cursor: pointer;
 }
+
 /* Contact Form Modal */
 /* For Mobile */
 @media (max-width: 800px) {
@@ -400,7 +391,7 @@ select {
   /* Fade Modal In */
   .contact-form {
     animation-name: fadeModal;
-    animation-duration: 1.7s;
+    animation-duration: 1s;
   }
   @keyframes fadeModal {
     /* Set and change the transparency: */
@@ -533,14 +524,65 @@ a {
 }
 
 /* **************** */
+/* Fallback CSS - FIREFOX */
+/* **************** */
+/* white background fallback */
+.backdrop-blur {
+  background-color: #fff;
+}
+
+#contact-form {
+  background-color: #fff;
+}
+
+/* if backdrop support: glassmorphism background effect */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .backdrop-blur {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(2rem);
+    background: hsl(var(--clr-codgray) / 0.95);
+  }
+  #contact-form {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+/* **************** */
+/* Mobile Phone Landscape */
+/* **************** */
+/* @media screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 460px) {
+  .hero-content img {
+    max-width: 50%;
+    padding: 0;
+  }
+
+  .hero-text {
+    max-width: 50%;
+  }
+} */
+
+/* **************** */
+/* Samsung Galaxy Media Query - 400px to 560px */
+/* should fix everything from 400px up to 560px */
+/* **************** */
+
+@media (min-width: 400px) {
+  @-moz-document url-prefix() {
+  }
+  .story-1 article h1,
+  .story-2 article h1,
+  .story-3 article h1 {
+    font-size: var(--fs-500);
+    font-weight: 600;
+  }
+}
+
+/* **************** */
 /* MOBILE MEDIA QUERY MAX 560PX*/
 /* **************** */
 @media (max-width: 560px) {
-  /* body {
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-  } */
   /* Header & Nav */
   .logo {
     margin: 1rem;
@@ -552,18 +594,15 @@ a {
     justify-content: space-between;
     align-items: center;
   }
-  /* Navigation */
-  /* .primary-navigation {
-    display: none;
-  } */
+
   .primary-navigation {
     --gap: clamp(1.5rem, 5vw, 3.5rem);
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
-    background: hsl(var(--clr-codgray) / 0.95);
-    backdrop-filter: blur(2rem);
+    /* background: hsl(var(--clr-codgray) / 0.95);
+    backdrop-filter: blur(2rem); */
   }
 
   .primary-navigation a {
@@ -1014,10 +1053,6 @@ a {
     justify-content: space-between;
     align-items: center;
   }
-  /* Navigation */
-  /* .primary-navigation {
-    display: none;
-  } */
 
   .desktop-navigation {
     display: none;
@@ -1644,7 +1679,7 @@ a {
   .story-2 {
     padding: 6rem 10rem 6rem 10rem;
     gap: 1rem;
-    background-position-y: 7em;
+    background-position-y: 6em;
     background-position-x: 10em;
   }
 
@@ -1663,7 +1698,7 @@ a {
 
   .story-2 h1,
   .story-2 p {
-    width: 25rem;
+    width: 22rem;
     text-align: right;
   }
 
@@ -1671,7 +1706,7 @@ a {
     line-height: 1.5rem;
   }
 
-  .story-2 img {
+  .story-2 article img {
     border: outline red 1px;
   }
 
