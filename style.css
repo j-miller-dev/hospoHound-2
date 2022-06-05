@@ -695,13 +695,16 @@ a {
   }
 
   .hero-content img {
+    overflow: hidden;
     max-width: 80%;
+    max-height: 100%;
     justify-content: center;
     padding: 2rem;
   }
 
   .hero-text {
     padding: 2rem 2rem 4rem 2rem;
+    /* padding: calc(8px + 1.5625vw); */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1160,6 +1163,7 @@ a {
     max-width: 70%;
     justify-content: center;
     padding: 2rem;
+    overflow: hidden;
   }
 
   .hero-text {
@@ -1481,22 +1485,56 @@ a {
 /* DESKTOP MEDIA QUERY */
 /* ******************** */
 @media (min-width: 800px) {
-  section,
-  footer,
-  header {
-    border: red solid 1px;
-  }
+ 
   /* ------------------------ */
   /* DESKTOP */
   /* ------------------------ */
+  /* Contact Form Desktop */
+/* Overlay */
+.contact-form-modal {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  margin: auto 0;
+  height: 500px;
+  width: 500px;
+
+  z-index: 5000;
+}
+/* Modal */
+
+#contact-form {
+  overflow: hidden;
+  height: 80vh;
+  width: 80vw;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: absolute;
+  margin: 0 auto;
+  padding: calc(8px + 1.5625vw);
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+
   /* Contact Modal */
   .contact-form {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   }
+
+  .contact-form p {
+    padding: 1rem;
+  }
+
   .contact-form-modal {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -1504,7 +1542,42 @@ a {
     left: 0;
   }
 
+  #ajaxForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+  }
+
+  .form-control {
+    padding: 0.2rem;
+    max-width: 100%;
+  }
+
+.item-e {
+  grid-column: 1/3;
+}
+
+.item-f {
+  grid-column: 1/3
+}
+
+.item-g {
+  grid-column: 1/3;
+}
+
+  .form-control input {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+  .form-control textarea {
+    max-width: 80%;
+    padding: 0.5rem;
+    resize: none;
+  }
+
   .modal-exit {
+    position: absolute;
     top: 8rem;
     right: 10rem;
   }
@@ -1515,6 +1588,8 @@ a {
     background-color: #fff;
     cursor: pointer;
     font-size: var(--fs-300);
+    max-width: 50%;
+    white-space: nowrap;
   }
   .contact-form {
     animation-name: fadeModal;
@@ -1529,6 +1604,32 @@ a {
       opacity: 1;
     }
   }
+
+  /* **************** */
+/* Fallback CSS - FIREFOX */
+/* **************** */
+/* white background fallback */
+.backdrop-blur {
+  background-color: #fff;
+}
+
+#contact-form {
+  background-color: #fff;
+}
+
+/* if backdrop support: glassmorphism background effect */
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .backdrop-blur {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(2rem);
+    background: hsl(var(--clr-codgray) / 0.95);
+  }
+  #contact-form {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
   /* primary-header */
   .logo {
     margin: 0;
@@ -1613,6 +1714,7 @@ a {
     justify-content: center;
     padding: 2rem;
     flex: 1 1 auto;
+    overflow: hidden;
   }
 
   .hero-text {

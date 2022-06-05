@@ -31,10 +31,7 @@
         <h2>Let's work together!</span></h2>
         <p>If you're interested in creating an online experience that you can be proud of, please get in touch with us below:</p>
             <form id="ajaxForm" action="https://getform.io/f/653db60a-ed7c-40b1-9335-1dc3871bfe4f" method="POST">
-              <div class="form-control">
-                <input type="hidden" name="_captcha" value="false">
-  
-  
+              <div class="form-control item-a">
                 <input 
                 type="text" 
                 id="name name-input" 
@@ -44,13 +41,12 @@
                 minlength="2" maxlength="20"
                 required />
               </div>
-              <input type="hidden" name="_subject" value="">
-              <input type="hidden" name="_template" value="box">
   
-              <div class="form-control">
+              <div class="form-control item-b">
                 <input 
                 type="text" 
                 id="number phone-input" 
+                class=""
                 name="number"
                 placeholder="contact number"
                 tabindex="2"
@@ -58,7 +54,7 @@
                 required />
               </div>
               
-              <div class="form-control">
+              <div class="form-control item-c">
                 <input 
                 type="email" 
                 id="email email-input" 
@@ -67,29 +63,29 @@
                 tabindex="3"
                 required />
               </div>
-              <!-- CHECKBOX -->
-              <div class="checkbox-container-container">
-                <h4 class="form-text">How would you like to be contacted?</h4>
-                <label class="checbox-container">Phone
-                  <input  class="checkbox" type="checkbox" checked="checked">
-                  <!-- <span class="checkmark"></span> -->
-                </label>
-                
-                <label class="checkbox-container">email
-                  <input class="checkbox" type="checkbox">
-                  <!-- <span class="checkmark"></span> -->
-                </label>
-              </div>
-              <div class="form-control">
+              <div class="form-control item-d">
                 <input
                   type="text"
                   id="business-name"
-                  name="name"
+                  name="business name"
                   placeholder="business name"
                   tabindex="4"
                 />
               </div>
-              <div class="form-control full-width">
+              <!-- CHECKBOX -->
+              <div class="item-e checkbox-container-container">
+                <h4 class="form-text">How would you like to be contacted?</h4>
+                <label class="checbox-container">Phone
+                  <input  class="checkbox" name="method:mobile" type="checkbox" value="yes">
+                  <!-- <span class="checkmark"></span> -->
+                </label>
+                
+                <label class="checkbox-container">email
+                  <input class="checkbox" name="method:email" type="checkbox" value="yes">
+                  <!-- <span class="checkmark"></span> -->
+                </label>
+              </div>
+              <div class="form-control full-width item-f">
                 <textarea 
                 rows="5" 
                 type="text" 
@@ -100,7 +96,11 @@
                 placeholder="please give us a taste of what you're after?"></textarea>
           
               </div>
-              <button id="submit" type="submit" class="send-message fs-500">get in touch</button>
+              <div class="item-g">
+
+                <button id="submit" type="submit" class="send-message fs-500 item-g">get in touch</button>
+              </div>
+
               <!-- <div class="checkbox-container-container">
                 <h4 class="form-text">Not sure what you're after? Would you like a free website review?</h4>
                 <label class="checbox-container">Yes please!
@@ -277,7 +277,7 @@
       </div>
     </section>
     <!-- MODERN TOOLS SECTION -->
-    <section class="modern-tools flex flow">
+    <!-- <section class="modern-tools flex flow">
       <article class="text flex">
         <h1 class="fs-700">Modern tools for the modern world</h1>
         <p class="fs-400">
@@ -287,7 +287,7 @@
       </article>
       
       <img src="./assets/images/HospoHound_ModernWorldImage.jpg" alt="">
-    </section>
+    </section> -->
     <!-- PORTFOLIO SECTION -->
     
     <!-- Mobile Portfolio Section -->
